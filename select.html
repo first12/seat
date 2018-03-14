@@ -47,6 +47,11 @@
         background-color: orange;
     }
     .content li{}
+    #show-more{
+        text-align: center;
+        margin-top: .5rem;
+        font-size: .14rem;
+    }
 </style>
 <body>
 <div class="content">
@@ -55,6 +60,7 @@
     </ul>
 </div>
 
+<div id="show-more">点击加载更多。。</div>
 <script>
 
 
@@ -175,6 +181,9 @@
 
     var seat = new Seat();
     seat.init(900);
+    document.querySelector('#show-more').addEventListener('click',function(){
+        seat.renderSeat(900);
+    })
 
 </script>
 </body>
